@@ -1,0 +1,16 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller // 핸들러 매핑이 이걸 알 수 있도록 작성해준다.
+public class SumController {
+	
+	@GetMapping(value ="/sum.do" , produces="text/html; charset=UTF-8" )
+	@ResponseBody // 결과를 파일이 아니라  문자열로 바로 뿌려달라는 어노테이션
+	public String Sum() {
+		return "결과  : "+ Sum();
+	}
+	
+}

@@ -1,0 +1,5 @@
+$(function(){
+	$('#writeBtn').click(function(){
+		alert("오냥?")
+	})
+})

@@ -1,0 +1,13 @@
+package spring.conf;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringConfiguration {
+	@Bean
+	public dataSource() {
+		BasicDataSource basicDataSource = new BasicDataSource();
+		return basicDataSource;
+	}
+}

@@ -1,0 +1,10 @@
+package user.dao;
+
+public class UserDAOMyBatis implements UserDAO {
+	private SqlSession sqlSession = null;
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+	
+}

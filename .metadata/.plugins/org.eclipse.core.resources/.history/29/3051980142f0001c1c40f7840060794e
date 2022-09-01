@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- Connection Pool & DataSource -->
+	
+	<bean id = "" class = ""></bean>
+
+
+
+	<bean id = "helloSpring" class = "user.main.HelloSpring"/>
+	<bean id = "userInsertService" class = "user.service.UserInsertService">
+		<property name = "userDTO" ref = "userDTO"/><!-- setter메소드를 통해서 userDTO를 전달하고 있음. -->
+		<property name = "userDAO" ref = "userDAOImpl"></property>
+	</bean>
+	<bean id = "userSelectService" class = "user.service.UserSelectService"/>
+	<bean id = "userDTO" class = "user.bean.UserDTO"></bean>
+	
+	<bean id = "userDAOImpl" class = "user.dao.UserDAOImpl"></bean>
+</beans>

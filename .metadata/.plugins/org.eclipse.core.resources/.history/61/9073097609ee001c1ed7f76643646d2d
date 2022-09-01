@@ -1,0 +1,14 @@
+package sample04;
+
+//파일로 출력
+public class FileOutputter implements Outputter {
+
+	private String fileName, filePath;
+	
+	@Override
+	public void output(String message) {
+		
+		
+	}
+
+}

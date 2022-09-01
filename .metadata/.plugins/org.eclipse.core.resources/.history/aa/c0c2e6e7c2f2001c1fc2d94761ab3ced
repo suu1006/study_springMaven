@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action = "">
+<!-- 1번.단순 submit -->
+<!-- 2번. Ajax(비동기통신- 요청이 올때까지 기다리지 않고 할일을 하겠다!) -->
+
+</form>
+</body>
+</html>

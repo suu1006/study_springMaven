@@ -1,0 +1,20 @@
+package sample02;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component //아이디명이 같으니까 안쓴다. 
+public class CalcAdd implements Calc {
+	
+	private int x, y;
+	
+	public CalcAdd(@Value("25")int x, @Value("36") int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	@Override
+	public void calculate() {
+		System.out.println(x + "+" + y + "=" + (x+y));
+	}
+}

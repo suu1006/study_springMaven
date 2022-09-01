@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1" frame="hsides" rules="rows"> <!-- frame="hsides"가로선만 그릴거에요   rules="rows"행단위로여-->
+	<tr>
+		<th width ="150">이름</th> <!-- th는 굵게 나온다. th = 테이블의 이름 -->
+		<th width ="150">아이디</th>
+		<th width ="150">비밀번호</th>
+	</tr>
+	
+	<!-- 동적으로 처리한다. 동적으로 처리해서 디비를 여기에 가져다 붙이겠다. -->
+	
+	
+	
+</table>
+</body>
+</html>

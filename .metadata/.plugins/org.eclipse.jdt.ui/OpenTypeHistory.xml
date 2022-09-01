@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=chapter01/src&lt;sample05{SungJuk.java[SungJuk" modifiers="513" timestamp="1655269508274"/>
+    <typeInfo handle="=chapter02/src&lt;sample01{MessageBean.java[MessageBean" modifiers="513" timestamp="1655273164460"/>
+    <typeInfo handle="=chapter02/src&lt;sample02{Calc.java[Calc" modifiers="513" timestamp="1655277983653"/>
+    <typeInfo handle="=chapter02/src&lt;sample04{MessageBean.java[MessageBean" modifiers="513" timestamp="1655448243019"/>
+    <typeInfo handle="=chapter02/src&lt;sample04{Outputter.java[Outputter" modifiers="513" timestamp="1655448217106"/>
+    <typeInfo handle="=chapter02/C:\/jdk11\/lib\/jrt-fs.jar`java.xml=/module=/true=/=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/11\/docs\/api\/=/&lt;com.sun.org.apache.xalan.internal.xsltc.runtime.output(OutputBuffer.class[OutputBuffer" modifiers="1536" timestamp="1649646722586"/>
+    <typeInfo handle="=chapter06_SpringWebMaven/src=/optional=/true=/=/maven.pomderived=/true=/&lt;user.service{UserService.java[UserService" modifiers="513" timestamp="1655971126528"/>
+    <typeInfo handle="=SpringProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;member.service{MemberService.java[MemberService" modifiers="513" timestamp="1656306991206"/>
+    <typeInfo handle="=SpringProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;member.dao{MemberDAO.java[MemberDAO" modifiers="513" timestamp="1656307039558"/>
+    <typeInfo handle="=SpringProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;board.service{BoardService.java[BoardService" modifiers="513" timestamp="1656556326878"/>
+    <typeInfo handle="=SpringProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;imageboard.service{ImageboardService.java[ImageboardService" modifiers="513" timestamp="1656470466708"/>
+    <typeInfo handle="=SpringProject/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;imageboard.dao{ImageboardDAO.java[ImageboardDAO" modifiers="513" timestamp="1656470831913"/>
+    <typeInfo handle="=chapter03/src&lt;sample01{MessageBean.java[MessageBean" modifiers="513" timestamp="1656644250379"/>
+    <typeInfo handle="=chapter03/src&lt;sample02_Java{MessageBean.java[MessageBean" modifiers="513" timestamp="1656897217277"/>
+</typeInfoHistroy>

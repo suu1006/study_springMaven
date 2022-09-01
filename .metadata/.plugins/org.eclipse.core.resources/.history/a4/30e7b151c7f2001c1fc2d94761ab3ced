@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 1번.단순 submit -->
+<form id="uploadForm" method="post" enctype="multitype/form-data" action = "//chapter06_SpringWebMaven/user/upload"> <!--  method="post" enctype="multitype/form-data" 필수!! 꼭 필요하다! -->
+
+<!-- 2번. Ajax(비동기통신- 요청이 올때까지 기다리지 않고 할일을 하겠다!) -->
+
+<input type="file" name="img">
+<br><br>
+<input type="button" id="uploadBtn" value="이미지등록">
+</form>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#uploadBtn').click(function(){
+		// 1. 단순 submit
+		$('#uploadForm').submit();
+		
+		// 2. Ajax 통신
+		
+	});
+})
+</script>
+</body>
+</html>

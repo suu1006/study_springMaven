@@ -1,0 +1,94 @@
+package user.controller;
+
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import user.bean.UserDTO;
+import user.service.UserService;
+
+@Controller
+@RequestMapping(value="user") // / 써도 되고 안써도 되고
+public class UserController {
+	
+	@Autowired 
+	private UserService userService; 
+					//전에는UserService userService = new UserServiceImpl() 했었는데, 이제는 어노테이션 써주자!
+	@RequestMapping(value = "writeForm", method = RequestMethod.GET)
+		public String write() {
+			return "/user/writeForm";
+	}
+	
+	@PostMapping(value = "write") // @RequestMapping(value="user") 이렇게 클래스 앞에 적어줘서 /user/write 이 부분을 -> write로 고쳤다
+	@ResponseBody //jsp가지 말고 바로 ajax로 가! 
+	public void write(@ModelAttribute UserDTO userDTO) {
+		//DB
+		userService.write(userDTO);
+	}
+	
+	@PostMapping(value="checkId")
+	@ResponseBody 
+	public String checkId(@RequestParam String id) { // 아이디값 받아야지
+		//DB
+		return userService.checkId(id); // service가서 db 해결하자! 
+	}
+	
+	@GetMapping(value = "list")
+	public String list() {
+		return "/user/list";
+	}
+	
+	@PostMapping(value="getUserList") // json으로 넘겨줘야함
+	@ResponseBody  // 내가알아서 바꿔서 보내줄게 ! json으로 변환안해도되!
+	public List<UserDTO> getUserList() {
+		//DB에서 레코드를 전부 꺼내온다.
+		//select * from usertable
+		//List(UserDTO) 리스트는 절대 return 될 수 없다 그래서 json썼다. 근데 스프링은 알아서 list->json 변환해준다.
+		return  userService.getUserList(); //List를 리턴해서 보내면  스프링이 자동으로 바꾼다. 리스폰스바디가! 서비스로 가서 처리하자!
+	}
+	
+	@GetMapping(value = "updateForm")
+	public String updateForm() {
+		return "/user/updateForm";
+	}
+	
+	@PostMapping(value="getUser")
+	@ResponseBody  
+	public UserDTO getUser(@RequestParam String id) {
+		return userService.getUser(id);
+	}
+	@PostMapping(value = "update") 
+	@ResponseBody 
+	public void update(@RequestParam Map<String, String> map) {
+		userService.update(map);
+	}
+	@GetMapping(value = "deleteForm")
+	public String deleteForm() {
+		return "/user/deleteForm";
+	}
+	@PostMapping(value = "delete") 
+	@ResponseBody 
+	public void delete(@RequestParam String id) {
+		userService.delete(id);
+	}
+	
+	@GetMapping(value = "uploadForm")
+	public String uploadForm() {
+		return "/user/uploadForm";
+	}
+	@PostMapping(value = "upload") 
+	@ResponseBody // 브라우저에 바로 뿌려버려랏
+	public void upload() {
+		userService.upload(id);
+	}
+}

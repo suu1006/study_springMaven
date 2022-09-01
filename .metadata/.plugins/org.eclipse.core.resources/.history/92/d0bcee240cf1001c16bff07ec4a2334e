@@ -1,0 +1,24 @@
+package user.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.transaction.annotation.Transactional;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+
+@Transactional // 마이바티스 처리할때 다 처리해줌.
+public class UserDAOMyBatis implements UserDAO {
+	@Setter
+	private SqlSession sqlSession = null;
+
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
+
+	@Override
+	public void write(UserDTO userDTO) {
+		sqlSession.insert("userSQL.write", userDTO); // sqlSession.close 해주지 않아도됨. transactionManager이 해줌. 
+		
+	}
+	
+}

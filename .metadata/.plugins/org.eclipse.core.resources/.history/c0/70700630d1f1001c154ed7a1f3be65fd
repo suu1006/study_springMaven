@@ -1,0 +1,10 @@
+package com.bean;
+
+public class SumDTO {
+	private int x;
+	private int y;
+	
+	public void Sum() {
+		System.out.println("x+y = " + (x+y));
+	}
+}

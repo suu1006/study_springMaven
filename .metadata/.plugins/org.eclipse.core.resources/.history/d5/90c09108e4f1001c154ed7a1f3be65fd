@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input>이름</input>
+<input>아이디</input>
+<input>비밀번호</input>
+<button>회원가입</button>
+<reset>다시작성</reset>
+</body>
+</html>

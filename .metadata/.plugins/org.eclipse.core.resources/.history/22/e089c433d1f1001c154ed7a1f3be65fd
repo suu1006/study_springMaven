@@ -1,0 +1,13 @@
+package com.bean;
+
+import lombok.Data;
+
+@Data
+public class SumDTO {
+	private int x;
+	private int y;
+	
+	public void Sum() {
+		System.out.println("x+y = " + (x+y));
+	}
+}

@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<img src = "../image/jeongsu.gif" alt = "토끼" width = "300" height = "300" 
+onclick = "location.href='../index.jsp'" style = "cursor:pointer;">
+ <p>
+ 	삭제할 아이디 입력 <input type ="text" id = "searchId">
+ 	<input type ="button" id = "searchIdBtn" value = "검색">
+ </p>
+ 
+ <div id = "resultDiv"></div>
+ <!-- 동적 처리 -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+$(function(){
+	$.ajax({
+		type: 'post',
+		url : '/chapter06_SpringWebMaven/user/getUserList',
+		data: 'json',// 원래는 페이지 번호를 보내줘야함
+		 success : function(){
+			  alert(JSON.stringify(data));
+		  },
+		  error : function(err) {
+			  console.log(err);
+		  }
+	  });
+	});

@@ -1,0 +1,17 @@
+$(function(){
+	$('#writeBtn').click(function(){
+		 $('#nameDiv').empty();
+	      $('#idDiv').empty();
+	      $('#pwdDiv').empty();
+	      
+	      if(!$('#name').val()) {
+	          $('#nameDiv').html('이름을 입력해주세요.');
+	      } else if(!$('#id').val()) {
+	          $('#idDiv').html('아이디를 입력해주세요.');
+	      } else if(!$('#pwd').val()) {
+	          $('#pwdDiv').html('비밀번호를 입력해주세요.');
+	      } else {
+	         submit();
+	      }
+	})
+})

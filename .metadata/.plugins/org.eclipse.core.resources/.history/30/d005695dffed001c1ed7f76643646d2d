@@ -1,0 +1,14 @@
+package sample05;
+
+import java.util.List;
+
+public class SungJukDelete implements SungJuk {
+
+	@Override
+	public void execute() {
+	
+		private List<SungJukDTO2> list;
+
+	}
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<bean id = "viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name = "suffix" value = ".jsp"></property> <!--확장자 .jsp를 붙일것이다.  꼬릿말 이렇게 붙여라 -->
+	</bean>
+	
+	<bean id = "multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name = "maxUploadSize" value = "5000000"></property> <!--5바이트 / 5000바이트 / 5000000(5메가바이트 -> 최대용량임!!)  --> 
+	</bean>
+
+	<context:component-scan base-package="user.controller"></context:component-scan>
+
+	<!--Spring Web MVC를 하기 위해 설정해야 하는 값들을 자동으로 추가해준다. -->
+	<mvc:annotation-driven/>
+	<mvc:resources location="/js/" mapping="/js/**"/> <!-- 이렇게 해주어야 디스패처로 안간다. / js 아래에 있는 모든 파일 전부 읽어들여서 맞는거랑 매핑해줘 -->
+	<mvc:resources location="/image/" mapping="/image/**"/> 
+
+</beans>
+<!--웹하고 연결해야해서 mvc 네임스페이스에서 추가해줌.-->

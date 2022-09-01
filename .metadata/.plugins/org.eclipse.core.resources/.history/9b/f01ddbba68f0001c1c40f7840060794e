@@ -1,0 +1,33 @@
+package spring.conf;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("classpath:spring/db.properties")
+public class SpringConfiguration {
+	
+	@Value("${jdbc.driver}")
+	private String driver;
+	
+	
+	/*
+	@Bean
+	public BasicDataSource dataSource() {
+		BasicDataSource basicDataSource = new BasicDataSource();
+		basicDataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		basicDataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		basicDataSource.setUsername("c##java");
+		basicDataSource.setPassword("oracle");
+		basicDataSource.setMaxTotal(20); // setMaxTotal, setMaxIdle 는 안적어도 됨.
+		basicDataSource.setMaxIdle(3);
+		
+		return basicDataSource;
+	}
+}
+*/
+	
+}

@@ -1,0 +1,10 @@
+package sample03;
+
+public abstract class Test {
+	public void test();
+	
+	public void test(int s) {
+		
+	}
+	
+}

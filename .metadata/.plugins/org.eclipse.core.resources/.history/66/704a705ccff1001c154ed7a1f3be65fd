@@ -1,0 +1,26 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller // 핸들러 매핑이 이걸 알 수 있도록 작성해준다.
+public class SumController {
+	
+	@RequestMapping(value = "/input.do" , method = RequestMethod.GET)
+	public String input() {
+		return "/sum/input";
+	}
+	
+//	@GetMapping(value = "result.do")
+//		public String result() {
+//			return "/sum/result";
+//	}
+	@GetMapping(value = "result.do")
+	public String result(@RequestParam int x, @RequestParam int y) {
+		return "/sum/result";
+}
+	
+}

@@ -1,0 +1,25 @@
+package user.service;
+
+import java.util.Scanner;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+public class UserUpdateService implements UserService {
+	
+	@Setter
+	private UserDTO userDTO;
+	@Setter
+	private UserDAO userDAO;
+	
+	
+	@Override
+	public void execute() {
+		System.out.println("찾고자하는 아이디가 없습니다.");
+		return;
+	} // if 
+		
+	}
+
+}
